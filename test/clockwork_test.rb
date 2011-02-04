@@ -1,3 +1,4 @@
+require 'rubygems'
 require File.expand_path('../../lib/clockwork', __FILE__)
 require 'contest'
 require 'mocha'
