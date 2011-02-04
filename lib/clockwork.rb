@@ -106,15 +106,23 @@ module Clockwork
 end
 
 class Numeric
-	def seconds; self; end
-	alias :second :seconds
+  unless method_defined?(:seconds)
+    def seconds; self; end
+    alias :second :seconds
+  end
 
-	def minutes; self * 60; end
-	alias :minute :minutes
+  unless method_defined?(:minutes)
+    def minutes; self * 60; end
+    alias :minute :minutes
+  end
 
-	def hours; self * 3600; end
-	alias :hour :hours
+  unless method_defined?(:hours)
+    def hours; self * 3600; end
+    alias :hour :hours
+  end
 
-	def days; self * 86400; end
-	alias :day :days
+  unless method_defined?(:days)
+    def days; self * 86400; end
+    alias :day :days
+  end
 end
